@@ -28,9 +28,12 @@ module "hf-ec2" {
   source  = "app.terraform.io/healthfirst/hf-ec2/aws"
   version = "1.0.0"
   os_platform   = var.os_platform
-  environment   = environment
-  subnet_type   = subnet_type
-  cost_center   = cost_center
-  instance_name = instance_name
-  instance_size = instance_size
+  environment   = var.environment
+  subnet_type   = var.subnet_type
+  cost_center   = var.cost_center
+  instance_name = var.instance_name
+  instance_size = var.instance_size
+  ami_filters   = var.ami_filters
+  account_vars  = var.account_vars
+  cost_centers  = var.cost_centers
 }
