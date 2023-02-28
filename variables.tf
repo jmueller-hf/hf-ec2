@@ -44,17 +44,17 @@ variable "user_data" {
   default     = ""
 }
 
-#variable "ami_filters" {
-#  type        = map
-#  description = "Global ami filters"
-#}
-#
-#variable "account_vars" {
-#  type        = map
-#  description = "Global account variables"
-#}
-#
-#variable "cost_centers" {
-#  type        = map
-#  description = "Global cost centers"
-#}
+variable "ami_filters" {
+  type        = map
+  description = "Global ami filters"
+}
+
+variable "account_vars" {
+  type        = map
+  description = "Global account variables"
+}
+
+variable "cost_centers" {
+  type        = map
+  description = "Global cost centers"
+}
