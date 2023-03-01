@@ -18,7 +18,7 @@ locals {
 }
 
 data "tfe_variable_set" "account_vars" {
-  name         = "account_vars"
+  name         = "HF-Global-Vars"
   organization = "healthfirst"
 }
 
