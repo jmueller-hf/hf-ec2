@@ -17,6 +17,16 @@ locals {
   }
 }
 
+data "tfe_variable_set" "account_vars" {
+  name         = "account_vars"
+  organization = "healthfirst"
+}
+
+data "tfe_variables" "test" {
+  variable_set_id = data.tfe_variable_set.account_vars.id
+}
+
+
 provider "aws" {
 #  default_tags {
 #    tags = merge(local.cost_center, local.default_tags)
