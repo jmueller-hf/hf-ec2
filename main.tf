@@ -10,7 +10,6 @@ terraform {
 }
 
 locals {
-  local.cost_centers = data.tfe_variables.global_vars
   default_tags = {
     "Environment" = var.environment
     "Name" = ""
