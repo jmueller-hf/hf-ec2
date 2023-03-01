@@ -10,22 +10,13 @@ terraform {
 }
 
 locals {
+  local.cost_centers = data.tfe_variables.global_vars
   default_tags = {
     "Environment" = var.environment
     "Name" = ""
     "Service Role" = ""
   }
 }
-
-data "tfe_variable_set" "account_vars" {
-  name         = "HF-Global-Vars"
-  organization = "healthfirst"
-}
-
-data "tfe_variables" "test" {
-  variable_set_id = data.tfe_variable_set.account_vars.id
-}
-
 
 provider "aws" {
 #  default_tags {
