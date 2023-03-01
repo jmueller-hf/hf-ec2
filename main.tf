@@ -9,23 +9,11 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-locals {
-  default_tags = {
-    "Environment" = var.environment
-    "Name" = ""
-    "Service Role" = ""
-  }
-}
-
-provider "aws" {
-#  default_tags {
-#    tags = merge(local.cost_center, local.default_tags)
-#  }
-}
+provider "aws" {}
 
 module "ec2" {
   source  = "app.terraform.io/healthfirst/hf-ec2/aws"
-  version = "1.2.0"
+  version = "1.4.0"
   os_platform   = var.os_platform
   environment   = var.environment
   subnet_type   = var.subnet_type
@@ -35,4 +23,5 @@ module "ec2" {
   ami_filters   = var.ami_filters
   account_vars  = var.account_vars
   cost_centers  = var.cost_centers
+  bc_password   = var.bc_password
 }
