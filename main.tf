@@ -24,7 +24,6 @@ provider "aws" {
 #  }
 }
 
-
 module "ec2" {
   source  = "app.terraform.io/healthfirst/hf-ec2/aws"
   version = "1.1.0"
