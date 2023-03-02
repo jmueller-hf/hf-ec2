@@ -12,3 +12,19 @@ output "instance_name" {
   value       = module.ec2.instance_name
   description = "The instance name"
 }
+
+output "instance_fqdn" {
+  value       = module.ec2.instance_fqdn
+  description = "The instance fully qualified domain name"
+}
+
+output "instance_key_name" {
+  value       = module.ec2.instance_key_name
+  description = "The instance key name"
+}
+   
+output "bc_objectId" {
+  value       = module.ec2.bc_objectId
+  description = "The Bluecat object id"
+}
+
