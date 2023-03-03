@@ -13,7 +13,7 @@ provider "aws" {}
 
 module "ec2" {
   source  = "app.terraform.io/healthfirst/hf-ec2/aws"
-  version = "1.10.0"
+  version = "1.11.0"
   os_platform   = var.os_platform
   environment   = var.environment
   subnet_type   = var.subnet_type
