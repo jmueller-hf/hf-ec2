@@ -23,5 +23,4 @@ module "ec2" {
   ami_filters   = var.ami_filters
   account_vars  = var.account_vars
   cost_centers  = var.cost_centers
-  bc_password   = var.bc_password
 }
